@@ -9,7 +9,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '5.x'
+  dotnetSdkVersion: '6.x'
 
 steps:
 - task: UseDotNet@2
@@ -46,7 +46,7 @@ steps:
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Install .NET Core tools from local manifest'
+  displayName: 'Install .NET tools from local manifest'
   inputs:
     command: custom
     custom: tool
